@@ -8,14 +8,17 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@200;300&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          fontFamily: {
+            sans: ['Open Sans', 'sans-serif'],
+            logo: ['Noto Serif Hebrew', 'serif'],
+          },
         }
       }
     }
@@ -59,6 +62,22 @@
       transition: max-height 0.3s ease;
     }
     #mobile-menu.open { max-height: 400px; }
+
+    /* ── Open Sans body font ── */
+    @font-face {
+      font-family: 'Open Sans';
+      src: url('./Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Open Sans';
+      src: url('./Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: italic;
+      font-display: swap;
+    }
   </style>
 </head>
 
@@ -68,8 +87,8 @@
 <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E5E1DA]">
   <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
     <div>
-      <p class="font-semibold text-stone-900 text-[15px] leading-tight">שולי ג'ורג'</p>
-      <p class="text-xs text-stone-400">MSW | ליווי קליני-שיקומי</p>
+      <p class="font-logo text-2xl leading-tight" style="color:#C19A5A; font-weight:200; font-style:italic;">MSW שולי ג'ורג'</p>
+      <p class="text-xs text-[#92C7CF] mt-0.5">ליווי קליני-שיקומי לצעירים מחלימים</p>
     </div>
     <div class="hidden md:flex items-center gap-7">
       <a href="#about"      class="text-sm text-stone-500 hover:text-stone-900 transition-colors">אודות</a>
@@ -94,6 +113,15 @@
     </div>
   </div>
 </nav>
+
+<!-- ═══════════════════════════════════════ LOGO HEADER ═══ -->
+<div class="bg-white py-10 border-b border-[#E5E1DA]">
+  <div class="max-w-6xl mx-auto px-5 text-right">
+    <p class="font-logo leading-tight" style="color:#C19A5A; font-weight:200; font-style:italic; font-size:clamp(2.8rem,6vw,4.5rem);">MSW שולי ג'ורג'</p>
+    <p class="text-[#92C7CF] mt-2" style="font-size:clamp(1rem,2vw,1.2rem);">עו״ס קלינית | ליווי קליני-שיקומי לצעירים מחלימים</p>
+    <p class="text-stone-400 text-sm mt-1.5 tracking-wide">מלווה · מרצה · מדריכה בכירה</p>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════ HERO ═══ -->
 <section class="bg-white pt-12 pb-14 overflow-hidden">
