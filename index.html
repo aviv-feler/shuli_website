@@ -59,21 +59,6 @@
         transition-delay: 400ms;
       }
 
-      /* ── SVG pulse ring ── */
-      @keyframes pulse-ring {
-        0% {
-          r: 15;
-          opacity: 0.7;
-        }
-        100% {
-          r: 35;
-          opacity: 0;
-        }
-      }
-      .pulse {
-        animation: pulse-ring 2s ease-out infinite;
-      }
-
       /* ── FAQ accordion ── */
       .faq-body {
         max-height: 0;
@@ -309,293 +294,77 @@
             </div>
           </div>
 
-          <!-- SVG Phone Mockup -->
-          <div class="flex justify-center aos aos-d2">
-            <svg
-              width="255"
-              height="475"
-              viewBox="0 0 255 475"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="drop-shadow-xl"
-              style="direction: ltr"
-            >
-              <!-- Phone shell -->
-              <rect
-                x="8"
-                y="8"
-                width="239"
-                height="459"
-                rx="34"
-                fill="white"
-                stroke="#E5E1DA"
-                stroke-width="2"
-              />
-              <rect
-                x="12"
-                y="12"
-                width="231"
-                height="451"
-                rx="30"
-                fill="#FBF9F1"
-              />
-              <!-- Top bar -->
-              <rect
-                x="12"
-                y="12"
-                width="231"
-                height="30"
-                rx="30"
-                fill="white"
-              />
-              <rect x="12" y="30" width="231" height="12" fill="white" />
-              <!-- Notch -->
-              <rect x="98" y="15" width="59" height="8" rx="4" fill="#E5E1DA" />
-              <!-- Screen header -->
-              <rect
-                x="20"
-                y="52"
-                width="215"
-                height="36"
-                rx="10"
-                fill="white"
-              />
-              <text
-                x="127"
-                y="75"
-                text-anchor="middle"
-                font-size="11.5"
-                fill="#1c1917"
-                font-family="Inter,sans-serif"
-                font-weight="600"
-              >
-                מפת הדרכים שלך
-              </text>
-              <rect
-                x="188"
-                y="59"
-                width="40"
-                height="20"
-                rx="7"
-                fill="#AAD7D9"
-              />
-              <text
-                x="208"
-                y="73"
-                text-anchor="middle"
-                font-size="8.5"
-                fill="#7ab4bc"
-                font-family="Inter,sans-serif"
-                font-weight="600"
-              >
-                6 שלבים
-              </text>
-              <!-- Journey path -->
-              <path
-                d="M127 150 C127 185 82 205 82 230 C82 265 165 290 165 315"
-                stroke="#d6d3d1"
-                stroke-width="2"
-                stroke-dasharray="5,5"
-                fill="none"
-              />
-              <!-- Step 1 – active -->
-              <circle cx="127" cy="135" r="22" fill="#92C7CF" opacity="0.12" />
-              <circle cx="127" cy="135" r="15" fill="#92C7CF" />
-              <text
-                x="127"
-                y="140"
-                text-anchor="middle"
-                font-size="10"
-                fill="white"
-                font-family="Inter,sans-serif"
-                font-weight="700"
-              >
-                1
-              </text>
-              <!-- Pulse ring (animated) -->
-              <circle
-                cx="127"
-                cy="135"
-                r="15"
-                fill="none"
-                stroke="#92C7CF"
-                stroke-width="1.5"
-                class="pulse"
-              />
-              <!-- Step 1 label -->
-              <text
-                x="153"
-                y="131"
-                font-size="9.5"
-                fill="#1c1917"
-                font-family="Inter,sans-serif"
-                font-weight="500"
-              >
-                מיפוי כוחות
-              </text>
-              <text
-                x="153"
-                y="143"
-                font-size="8.5"
-                fill="#8a9ab0"
-                font-family="Inter,sans-serif"
-              >
-                זיהוי משאבים
-              </text>
-              <!-- Step 2 -->
-              <circle cx="82" cy="230" r="12" fill="#d6d3d1" />
-              <text
-                x="82"
-                y="234"
-                text-anchor="middle"
-                font-size="9"
-                fill="white"
-                font-family="Inter,sans-serif"
-                font-weight="600"
-              >
-                2
-              </text>
-              <!-- Step 2 label -->
-              <text
-                x="100"
-                y="226"
-                font-size="9"
-                fill="#78716c"
-                font-family="Inter,sans-serif"
-              >
-                בניית זהות
-              </text>
-              <text
-                x="100"
-                y="238"
-                font-size="8.5"
-                fill="#a8a29e"
-                font-family="Inter,sans-serif"
-              >
-                מעבר למחלה
-              </text>
-              <!-- Step 3 -->
-              <circle cx="165" cy="315" r="12" fill="#d6d3d1" />
-              <text
-                x="165"
-                y="319"
-                text-anchor="middle"
-                font-size="9"
-                fill="white"
-                font-family="Inter,sans-serif"
-                font-weight="600"
-              >
-                3
-              </text>
-              <!-- Step 3 label – below circle -->
-              <text
-                x="165"
-                y="337"
-                text-anchor="middle"
-                font-size="9"
-                fill="#78716c"
-                font-family="Inter,sans-serif"
-              >
-                כלים פרקטיים
-              </text>
-              <!-- More steps indicator -->
-              <text
-                x="127"
-                y="360"
-                text-anchor="middle"
-                font-size="8"
-                fill="#b0b8c4"
-                font-family="Inter,sans-serif"
-              >
-                + 3 שלבים נוספים
-              </text>
-              <!-- Bottom info card -->
-              <rect
-                x="20"
-                y="375"
-                width="215"
-                height="58"
-                rx="12"
-                fill="white"
-                stroke="#E5E1DA"
-                stroke-width="1.5"
-              />
-              <rect
-                x="31"
-                y="386"
-                width="18"
-                height="18"
-                rx="5"
-                fill="#AAD7D9"
-              />
-              <text
-                x="40"
-                y="399"
-                text-anchor="middle"
-                font-size="10"
-                fill="#92C7CF"
-                font-family="Inter,sans-serif"
-                font-weight="700"
-              >
-                ✓
-              </text>
-              <text
-                x="224"
-                y="392"
-                text-anchor="end"
-                font-size="9.5"
-                fill="#1c1917"
-                font-family="Inter,sans-serif"
-                font-weight="600"
-              >
-                שלב 1 מתוך 6
-              </text>
-              <text
-                x="224"
-                y="404"
-                text-anchor="end"
-                font-size="8.5"
-                fill="#78716c"
-                font-family="Inter,sans-serif"
-              >
-                מיפוי כוחות, בתהליך
-              </text>
-              <!-- Progress track -->
-              <rect
-                x="30"
-                y="414"
-                width="195"
-                height="5"
-                rx="2.5"
-                fill="#E5E1DA"
-              />
-              <rect
-                x="30"
-                y="414"
-                width="37"
-                height="5"
-                rx="2.5"
-                fill="#92C7CF"
-              />
-              <text
-                x="32"
-                y="428"
-                font-size="8"
-                fill="#a8a29e"
-                font-family="Inter,sans-serif"
-              >
-                17% הושלם
-              </text>
-              <!-- Home bar -->
-              <rect
-                x="103"
-                y="458"
-                width="49"
-                height="4"
-                rx="2"
-                fill="#E5E1DA"
-              />
-            </svg>
+          <!-- Hero Visual: Floating Cards -->
+          <div class="relative h-[460px] aos aos-d2">
+            <!-- Background blob -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-80 h-80 rounded-full bg-[#CBDCEB]/30"></div>
+            </div>
+
+            <!-- Stat badge (top-left in RTL = visual top-right) -->
+            <div class="absolute top-0 left-0 bg-[#6D94C5] rounded-2xl shadow-md px-4 py-3 z-20 text-white text-center">
+              <p class="text-2xl font-bold leading-none">77+</p>
+              <p class="text-xs opacity-80 mt-0.5">מחלימים ליוויתי</p>
+            </div>
+
+            <!-- Main journey card -->
+            <div class="absolute top-10 right-4 left-4 md:right-0 md:left-6 bg-white rounded-2xl shadow-md p-5 border border-[#E8DFCA] z-10">
+              <!-- Card header -->
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs text-stone-400">שלב 2 מתוך 6</span>
+                <span class="text-xs font-medium text-[#6D94C5] bg-[#CBDCEB]/40 px-2.5 py-1 rounded-full">מסע ההחלמה שלך</span>
+              </div>
+              <!-- Steps -->
+              <div class="flex flex-col gap-3.5">
+                <!-- Step 1: done -->
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#6D94C5] flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="check" class="w-4 h-4 text-white"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-stone-700">מיפוי כוחות</p>
+                    <p class="text-xs text-stone-400">הושלם</p>
+                  </div>
+                </div>
+                <!-- Step 2: active -->
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#6D94C5] ring-4 ring-[#CBDCEB]/50 flex items-center justify-center flex-shrink-0">
+                    <span class="text-white text-xs font-bold">2</span>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-stone-800">בניית זהות חדשה</p>
+                    <p class="text-xs text-[#6D94C5] font-medium">בתהליך</p>
+                  </div>
+                </div>
+                <!-- Step 3: upcoming -->
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full border-2 border-[#E8DFCA] flex items-center justify-center flex-shrink-0">
+                    <span class="text-stone-400 text-xs font-bold">3</span>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-stone-400">כלים פרקטיים</p>
+                    <p class="text-xs text-stone-300">בהמשך</p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-stone-300 text-center mt-3">+ 3 שלבים נוספים</p>
+              <!-- Progress bar -->
+              <div class="mt-4 pt-4 border-t border-[#E8DFCA]">
+                <div class="flex justify-between text-xs text-stone-400 mb-1.5">
+                  <span>33%</span>
+                  <span>התקדמות</span>
+                </div>
+                <div class="h-1.5 bg-[#F5EFE6] rounded-full">
+                  <div class="h-1.5 bg-[#6D94C5] rounded-full w-1/3 transition-all"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini testimonial card (bottom-right in RTL = visual bottom-left) -->
+            <div class="absolute bottom-4 right-2 bg-[#F5EFE6] rounded-xl shadow-sm p-3.5 border border-[#E8DFCA] z-20 max-w-[185px]">
+              <p class="text-xs text-stone-600 leading-relaxed">"סוף סוף הרגשתי שמישהי מבינה את הדרך שלי"</p>
+              <p class="text-xs text-stone-400 mt-1.5">— מחלימה, גיל 24</p>
+            </div>
           </div>
         </div>
       </div>
@@ -857,7 +626,7 @@
             כך נראה תהליך הליווי שלך
           </h2>
           <p class="text-stone-500 max-w-lg mx-auto text-[15px]">
-            תהליך ממוקד וקצר מועד (6–12 מפגשים), המבוסס על גישת ההחלמה
+            תהליך ממוקד וקצר מועד (6-12 מפגשים), המבוסס על גישת ההחלמה
             (Recovery) ומודלים של שיקום תפקודי.
           </p>
         </div>
@@ -1024,7 +793,7 @@
             id="btn-survivors"
             class="px-5 py-2.5 rounded-xl text-sm font-medium border transition-all bg-[#92C7CF] text-white border-[#92C7CF]"
           >
-            למחלימים (18–35)
+            למחלימים (18-35)
           </button>
           <button
             onclick="showTab('families')"
