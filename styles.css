@@ -1,0 +1,121 @@
+/* ── Amatic SC (logo font) ── */
+@font-face {
+  font-family: "Amatic SC";
+  src: url("./Amatic_SC,Lora,Open_Sans,Source_Sans_3/Amatic_SC/AmaticSC-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Amatic SC";
+  src: url("./Amatic_SC,Lora,Open_Sans,Source_Sans_3/Amatic_SC/AmaticSC-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ══════════════════════════════════════════
+   COLOR PALETTE — change colors here!
+   ══════════════════════════════════════════ */
+:root {
+  --primary: #688D94;          /* main teal accent */
+  --primary-hover: #7ab4bc;    /* teal hover/darker */
+  --primary-light: #AAD7D9;    /* light teal */
+  --bg-main: #fefdf6;          /* main background (white sections) */
+  --bg-warm: #fcfef6;          /* warm cream background */
+  --border-neutral: #E5E1DA;   /* neutral border */
+  --border-warm: #E8DFCA;      /* warm border */
+  --logo-purple: #688D94;      /* logo color */
+}
+
+/* ── Main background override ── */
+body {
+  background-color: var(--bg-main) !important;
+  font-size: 32px;
+}
+section.bg-white,
+footer.bg-white,
+nav.bg-white\/95 {
+  background-color: var(--bg-main) !important;
+}
+
+/* ── Scroll animations ── */
+.aos {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+.aos.visible {
+  opacity: 1;
+  transform: translateY(0);
+}   
+.aos-d1 {
+  transition-delay: 80ms;
+}
+.aos-d2 {
+  transition-delay: 160ms;
+}
+.aos-d3 {
+  transition-delay: 240ms;
+}
+.aos-d4 {
+  transition-delay: 320ms;
+}
+.aos-d5 {
+  transition-delay: 400ms;
+}
+
+/* ── FAQ accordion ── */
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-body.open {
+  max-height: 500px;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-icon.open {
+  transform: rotate(180deg);
+}
+
+/* ── Mobile menu ── */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+#mobile-menu.open {
+  max-height: 400px;
+}
+
+/* ── WhatsApp button ── */
+.whatsapp-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ── Open Sans body font ── */
+@font-face {
+  font-family: "Open Sans";
+  src: url("./Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

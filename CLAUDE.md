@@ -48,3 +48,8 @@ Blog → Team Training → Lecture → Contact → Footer
 - GitHub repo: shuli_website
 - Netlify site: Shuli's Website
 - Deploy command: npx netlify deploy --dir=. --prod
+
+## IMPORTANT — Commit / Deploy Rules
+- NEVER commit or push to GitHub without explicit user instruction
+- Netlify auto-deploys on every push, which counts against the monthly usage quota
+- Always wait for the user to say "commit" or "deploy" before running any git commit / git push
