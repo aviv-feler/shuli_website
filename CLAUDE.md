@@ -4,7 +4,7 @@
 - Single `index.html` file
 - Tailwind CSS via CDN (Play CDN)
 - Lucide Icons via CDN (unpkg)
-- Inter font from Google Fonts
+- Fonts: Amatic SC (logo/headings, local), Open Sans (body, local)
 - Hebrew RTL: `<html lang="he" dir="rtl">`
 - Netlify Forms for contact (data-netlify="true")
 
@@ -12,7 +12,7 @@
 - Light, minimal, clean, modern — shadcn aesthetic
 - Neutral palette: whites, grays, one subtle warm stone/amber accent
 - Good typography hierarchy, plenty of whitespace
-- Font: Inter (Google Fonts)
+- Fonts: Amatic SC (logo/headings), Open Sans (body) — self-hosted
 - Mobile responsive (Tailwind breakpoints)
 - Light motion: IntersectionObserver scroll animations, smooth transitions, subtle hover
 - Lucide icons only (no emoji)
@@ -33,8 +33,9 @@
 - Text primary: stone-900 (#1c1917)
 - Text secondary: stone-500 (#78716c)
 - Text muted: stone-400 (#a8a29e)
-- Accent: amber-500 (#f59e0b), amber-600 (#d97706)
-- Accent light: amber-50 (#fffbeb), amber-100 (#fef3c7)
+- Accent (primary): teal #688D94, hover #7ab4bc, light #AAD7D9
+- Background warm: #fcfef6
+- Border warm: #E8DFCA, neutral: #E5E1DA
 
 ## Sections
 Navbar → Hero (SVG phone mockup) → About → Services →
@@ -42,7 +43,7 @@ Process (6 steps) → Workshops → Testimonials → FAQ →
 Blog → Team Training → Lecture → Contact → Footer
 
 ## Footer
-© שולי ג'ורג' | shuligeorge.com | Shuli George
+© שולי ג'ורג' · shuli-george.netlify.app · Shuli George
 
 ## Deployment
 - GitHub repo: shuli_website

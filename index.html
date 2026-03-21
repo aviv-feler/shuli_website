@@ -9,12 +9,15 @@
       content="ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים. שולי ג'ורג', עו״ס קלינית (MSW) עם 25+ שנות ניסיון."
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gveret+Levin&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="שולי ג'ורג' | ליווי רגשי-מעשי לצעירים מחלימים" />
+    <meta property="og:description" content="ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים. עו״ס קלינית (MSW) עם 25+ שנות ניסיון." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shuli-george.netlify.app" />
+    <meta property="og:locale" content="he_IL" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23688D94'/><text x='50' y='72' text-anchor='middle' font-size='60' fill='white'>שג</text></svg>" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,19 +29,19 @@
               logo: ["Amatic SC", "cursive"],
             },
             fontSize: {
-              'xs':   ['1.5rem',  { lineHeight: '1.4' }],
-              'sm':   ['1.75rem', { lineHeight: '1.4' }],
-              'base': ['2rem',    { lineHeight: '1.5' }],
-              'lg':   ['2.4rem',  { lineHeight: '1.5' }],
-              'xl':   ['2.8rem',  { lineHeight: '1.4' }],
-              '2xl':  ['3.2rem',  { lineHeight: '1.3' }],
-              '3xl':  ['3.8rem',  { lineHeight: '1.3' }],
-              '4xl':  ['4.5rem',  { lineHeight: '1.2' }],
-              '5xl':  ['5.5rem',  { lineHeight: '1.1' }],
-              '6xl':  ['6.5rem',  { lineHeight: '1.1' }],
-              '7xl':  ['8rem',    { lineHeight: '1.05' }],
-              '8xl':  ['10rem',   { lineHeight: '1' }],
-              '9xl':  ['12rem',   { lineHeight: '1' }],
+              xs: ["1.5rem", { lineHeight: "1.4" }],
+              sm: ["1.75rem", { lineHeight: "1.4" }],
+              base: ["2rem", { lineHeight: "1.5" }],
+              lg: ["2.4rem", { lineHeight: "1.5" }],
+              xl: ["2.8rem", { lineHeight: "1.4" }],
+              "2xl": ["3.2rem", { lineHeight: "1.3" }],
+              "3xl": ["3.8rem", { lineHeight: "1.3" }],
+              "4xl": ["4.5rem", { lineHeight: "1.2" }],
+              "5xl": ["5.5rem", { lineHeight: "1.1" }],
+              "6xl": ["6.5rem", { lineHeight: "1.1" }],
+              "7xl": ["8rem", { lineHeight: "1.05" }],
+              "8xl": ["10rem", { lineHeight: "1" }],
+              "9xl": ["12rem", { lineHeight: "1" }],
             },
           },
         },
@@ -48,7 +51,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body class="bg-white text-stone-800 font-sans antialiased">
+  <body id="top" class="bg-white text-stone-800 font-sans antialiased">
     <!-- ═══════════════════════════════════════ NAVBAR ═══ -->
     <header
       class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--border-neutral)]"
@@ -92,7 +95,7 @@
 
         <!-- Brand (center) -->
         <a
-          href="#"
+          href="#top"
           class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none"
         >
           <span
@@ -117,6 +120,7 @@
             id="menu-btn"
             class="md:hidden p-2 text-stone-600"
             aria-label="תפריט"
+            aria-expanded="false"
           >
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
@@ -130,7 +134,9 @@
       >
         <div class="py-4 flex flex-col gap-4">
           <a href="#trust" class="text-[16px] text-stone-600 py-0.5">אודות</a>
-          <a href="#services" class="text-[16px] text-stone-600 py-0.5">שירותים</a>
+          <a href="#services" class="text-[16px] text-stone-600 py-0.5"
+            >שירותים</a
+          >
           <a href="#faq" class="text-[16px] text-stone-600 py-0.5">שאלות</a>
           <a href="#training" class="text-[16px] text-stone-600 py-0.5"
             >הדרכת צוותים</a
@@ -139,7 +145,9 @@
           <a href="#professionals" class="text-[16px] text-stone-600 py-0.5"
             >לאנשי מקצוע</a
           >
-          <a href="#contact" class="text-[16px] text-stone-600 py-0.5">צור קשר</a>
+          <a href="#contact" class="text-[16px] text-stone-600 py-0.5"
+            >צור קשר</a
+          >
         </div>
       </div>
     </header>
@@ -175,7 +183,7 @@
       <div class="max-w-6xl mx-auto px-5">
         <div class="max-w-2xl mx-auto">
           <!-- Text -->
-          <div class="flex flex-col gap-5 aos">
+          <div class="flex flex-col items-center text-center gap-5 aos">
             <span
               class="inline-flex items-center gap-2 bg-[var(--primary-light)]/40 border border-[var(--primary-light)] text-[var(--primary-hover)] text-xs font-medium px-3 py-1.5 rounded-full w-fit"
             >
@@ -184,7 +192,7 @@
             </span>
 
             <h1
-              class="text-4xl md:text-5xl font-bold text-stone-900 leading-tight"
+              class="text-2xl md:text-2xl font-bold text-stone-900 leading-tight"
             >
               לאחר שהטיפולים נגמרים <br />
               <span class="text-[var(--primary)]">מתחיל החלק שאף אחד</span
@@ -192,17 +200,17 @@
               לא באמת מכין אליו
             </h1>
 
-            <p class="text-stone-500 text-lg leading-relaxed">
+            <p class="text-stone-500 text-sm leading-relaxed max-w-lg">
               ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים,
               ללימודים, לעבודה, לזוגיות ולתחושת כיוון.
             </p>
 
-            <p class="text-stone-500 text-sm leading-relaxed">
+            <p class="text-stone-500 text-sm leading-relaxed max-w-lg">
               בהובלת שולי ג'ורג', עו"ס קלינית ומומחית לשיקום, עם יותר מ-25 שנות
               ניסיון בליווי אנשים ומשפחות במצבי משבר, שינוי והתחלה מחדש.
             </p>
 
-            <div class="flex flex-wrap gap-3 mt-1">
+            <div class="flex flex-wrap justify-center gap-3 mt-1">
               <a
                 href="#contact"
                 class="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-medium px-6 py-3.5 rounded-xl transition-colors text-sm"
@@ -219,7 +227,9 @@
               </a>
             </div>
 
-            <p class="text-xs text-stone-400 flex items-center gap-3 mt-1">
+            <p
+              class="text-xs text-stone-400 flex items-center justify-center gap-3 mt-1"
+            >
               <span>15 דקות</span>
               <span>ללא עלות</span>
               <span>ללא התחייבות</span>
@@ -236,14 +246,12 @@
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
-            אודות שולי
+            אודות
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">
-            למה אפשר לסמוך עליי?
-          </h2>
+          <h2 class="text-3xl font-bold text-stone-900">קצת עליי</h2>
           <p class="text-stone-500 mt-3 max-w-xl mx-auto text-sm">
-            אני מביאה איתי שילוב נדיר בין ניסיון מקצועי עמוק לבין היכרות אישית
-            קרובה עם העולם הזה.
+            אני מביאה איתי שילוב בין ניסיון מקצועי עמוק לבין היכרות אישית קרובה
+            עם העולם.
           </p>
         </div>
 
@@ -251,7 +259,7 @@
           <!-- Credentials -->
           <div class="flex flex-col gap-3">
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="graduation-cap"
@@ -262,7 +270,7 @@
               </p>
             </div>
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="award"
@@ -271,7 +279,7 @@
               <p class="text-stone-700 text-sm font-medium">מומחית לשיקום</p>
             </div>
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="clock"
@@ -282,7 +290,7 @@
               </p>
             </div>
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="users"
@@ -293,7 +301,7 @@
               </p>
             </div>
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="hospital"
@@ -304,7 +312,7 @@
               </p>
             </div>
             <div
-              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-[var(--bg-warm)]/50"
+              class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
             >
               <i
                 data-lucide="eye"
@@ -319,7 +327,7 @@
 
           <!-- Personal note -->
           <div
-            class="bg-[var(--bg-warm)] rounded-2xl p-7 border border-[var(--border-warm)] h-full flex flex-col justify-center"
+            class="bg-white rounded-2xl p-7 border border-[var(--border-warm)] h-full flex flex-col justify-center"
           >
             <i
               data-lucide="quote"
@@ -514,7 +522,7 @@
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
-            מה מקבלים
+            השירות שלי
           </p>
           <h2 class="text-3xl font-bold text-stone-900">מה מקבלים בליווי?</h2>
         </div>
@@ -522,7 +530,7 @@
         <div class="grid md:grid-cols-2 gap-6 aos aos-d1">
           <!-- 1 -->
           <div
-            class="flex items-start gap-4 p-6 rounded-2xl border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
+            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
           >
             <div
               class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
@@ -541,7 +549,7 @@
           </div>
           <!-- 2 -->
           <div
-            class="flex items-start gap-4 p-6 rounded-2xl border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
+            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
           >
             <div
               class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
@@ -560,7 +568,7 @@
           </div>
           <!-- 3 -->
           <div
-            class="flex items-start gap-4 p-6 rounded-2xl border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
+            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
           >
             <div
               class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
@@ -582,7 +590,7 @@
           </div>
           <!-- 4 -->
           <div
-            class="flex items-start gap-4 p-6 rounded-2xl border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
+            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
           >
             <div
               class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
@@ -600,7 +608,7 @@
           </div>
           <!-- 5 -->
           <div
-            class="flex items-start gap-4 p-6 rounded-2xl border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors md:col-span-2"
+            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors md:col-span-2"
           >
             <div
               class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
@@ -609,7 +617,7 @@
             </div>
             <div>
               <h3 class="font-semibold text-stone-800 mb-1.5">
-               כיוון, זהות ומשמעות
+                כיוון, זהות ומשמעות
               </h3>
               <p class="text-stone-500 text-sm leading-relaxed">
                 לא רק לדבר על מה שכואב — אלא גם להבין איך ממשיכים לחיות, לבחור
@@ -719,7 +727,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════ PROCESS ═══ -->
-    <section id="process" class="py-20 bg-[var(--bg-warm)]">
+    <section id="process" class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-5">
         <div class="text-center mb-12 aos">
           <p
@@ -849,7 +857,7 @@
         <div class="grid md:grid-cols-3 gap-6 aos aos-d1">
           <!-- T1 -->
           <div
-            class="bg-[var(--bg-warm)] rounded-2xl p-6 border border-[var(--border-warm)]"
+            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)]"
           >
             <i
               data-lucide="quote"
@@ -863,7 +871,7 @@
           </div>
           <!-- T2 -->
           <div
-            class="bg-[var(--bg-warm)] rounded-2xl p-6 border border-[var(--border-warm)]"
+            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)]"
           >
             <i
               data-lucide="quote"
@@ -877,7 +885,7 @@
           </div>
           <!-- T3 -->
           <div
-            class="bg-[var(--bg-warm)] rounded-2xl p-6 border border-[var(--border-warm)]"
+            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)]"
           >
             <i
               data-lucide="quote"
@@ -1020,10 +1028,11 @@
         <div class="flex flex-col gap-3 aos aos-d1">
           <!-- Q1 -->
           <div
-            class="border border-[var(--border-neutral)] rounded-2xl overflow-hidden"
+            class="border border-[var(--border-warm)] rounded-2xl overflow-hidden"
           >
             <button
               onclick="toggleFaq(this)"
+              aria-expanded="false"
               class="w-full flex items-center justify-between px-6 py-4 text-right hover:bg-stone-50 transition-colors"
             >
               <span class="font-medium text-stone-800 text-sm"
@@ -1036,7 +1045,7 @@
             </button>
             <div class="faq-body">
               <p class="px-6 pb-5 text-sm text-stone-500 leading-relaxed">
-                השירות מיועד בעיקר לצעירים מחלימים בגילאי 18–35, אך במקרים
+                השירות מיועד בעיקר לצעירים מחלימים בגילאי <span dir="ltr">18–35</span>, אך במקרים
                 מסוימים ניתן לפנות גם מעבר לטווח הזה. מוזמנים ליצור קשר ולשאול.
               </p>
             </div>
@@ -1044,10 +1053,11 @@
 
           <!-- Q2 -->
           <div
-            class="border border-[var(--border-neutral)] rounded-2xl overflow-hidden"
+            class="border border-[var(--border-warm)] rounded-2xl overflow-hidden"
           >
             <button
               onclick="toggleFaq(this)"
+              aria-expanded="false"
               class="w-full flex items-center justify-between px-6 py-4 text-right hover:bg-stone-50 transition-colors"
             >
               <span class="font-medium text-stone-800 text-sm"
@@ -1068,10 +1078,11 @@
 
           <!-- Q3 -->
           <div
-            class="border border-[var(--border-neutral)] rounded-2xl overflow-hidden"
+            class="border border-[var(--border-warm)] rounded-2xl overflow-hidden"
           >
             <button
               onclick="toggleFaq(this)"
+              aria-expanded="false"
               class="w-full flex items-center justify-between px-6 py-4 text-right hover:bg-stone-50 transition-colors"
             >
               <span class="font-medium text-stone-800 text-sm"
@@ -1092,10 +1103,11 @@
 
           <!-- Q4 -->
           <div
-            class="border border-[var(--border-neutral)] rounded-2xl overflow-hidden"
+            class="border border-[var(--border-warm)] rounded-2xl overflow-hidden"
           >
             <button
               onclick="toggleFaq(this)"
+              aria-expanded="false"
               class="w-full flex items-center justify-between px-6 py-4 text-right hover:bg-stone-50 transition-colors"
             >
               <span class="font-medium text-stone-800 text-sm"
@@ -1117,10 +1129,11 @@
 
           <!-- Q5 -->
           <div
-            class="border border-[var(--border-neutral)] rounded-2xl overflow-hidden"
+            class="border border-[var(--border-warm)] rounded-2xl overflow-hidden"
           >
             <button
               onclick="toggleFaq(this)"
+              aria-expanded="false"
               class="w-full flex items-center justify-between px-6 py-4 text-right hover:bg-stone-50 transition-colors"
             >
               <span class="font-medium text-stone-800 text-sm"
@@ -1197,7 +1210,7 @@
                 </div>
                 <div>
                   <p class="text-xs text-stone-400 mb-0.5">וואטסאפ / טלפון</p>
-                  <p class="text-sm text-stone-600 font-medium">054-2307754</p>
+                  <a href="tel:+972542307754" class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors">054-2307754</a>
                 </div>
               </div>
               <div class="flex items-center gap-3">
@@ -1211,9 +1224,9 @@
                 </div>
                 <div>
                   <p class="text-xs text-stone-400 mb-0.5">מייל</p>
-                  <p class="text-sm text-stone-600 font-medium">
+                  <a href="mailto:shulig5@gmail.com" class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors">
                     shulig5@gmail.com
-                  </p>
+                  </a>
                 </div>
               </div>
               <div class="flex items-center gap-3">
@@ -1235,7 +1248,7 @@
             </div>
 
             <div
-              class="bg-white border border-[var(--border-neutral)] rounded-2xl p-5"
+              class="bg-white border border-[var(--border-warm)] rounded-2xl p-5"
             >
               <div class="flex items-start gap-3">
                 <i
@@ -1260,9 +1273,10 @@
             <form
               name="contact"
               method="POST"
+              action="/#contact"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              class="bg-white border border-[var(--border-neutral)] rounded-2xl p-7 space-y-5"
+              class="bg-white border border-[var(--border-warm)] rounded-2xl p-7 space-y-5"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div class="hidden"><input name="bot-field" /></div>
@@ -1415,7 +1429,7 @@
           >
         </div>
         <p class="text-xs text-stone-400">
-          © שולי ג'ורג' · shuligeorge.com · Shuli George
+          © שולי ג'ורג' · shuli-george.netlify.app · Shuli George
         </p>
       </div>
     </footer>
@@ -1436,7 +1450,7 @@
     </a>
 
     <!-- ═══════════════════════════════════════ SCRIPTS ═══ -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.577.0/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
