@@ -59,6 +59,32 @@ const obs = new IntersectionObserver(
 );
 document.querySelectorAll(".aos").forEach((el) => obs.observe(el));
 
+/* Contact form — show success message */
+const contactForm = document.getElementById("contact-form");
+const formSuccess = document.getElementById("form-success");
+
+if (contactForm && formSuccess) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        contactForm.classList.add("hidden");
+        formSuccess.classList.remove("hidden");
+        lucide.createIcons();
+      })
+      .catch(() => {
+        contactForm.classList.add("hidden");
+        formSuccess.classList.remove("hidden");
+        lucide.createIcons();
+      });
+  });
+}
+
 /* Smooth anchor scrolling */
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {

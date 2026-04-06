@@ -31,7 +31,6 @@
 /* ── Main background override ── */
 body {
   background-color: var(--bg-main) !important;
-  font-size: 32px;
 }
 section.bg-white,
 footer.bg-white,

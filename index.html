@@ -10,14 +10,30 @@
     />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="שולי ג'ורג' | ליווי רגשי-מעשי לצעירים מחלימים" />
-    <meta property="og:description" content="ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים. עו״ס קלינית (MSW) עם 25+ שנות ניסיון." />
+    <meta
+      property="og:title"
+      content="שולי ג'ורג' | ליווי רגשי-מעשי לצעירים מחלימים"
+    />
+    <meta
+      property="og:description"
+      content="ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים. עו״ס קלינית (MSW) עם 25+ שנות ניסיון."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shuli-george.netlify.app" />
     <meta property="og:locale" content="he_IL" />
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23688D94'/><text x='50' y='72' text-anchor='middle' font-size='60' fill='white'>שג</text></svg>" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23688D94'/><text x='50' y='72' text-anchor='middle' font-size='60' fill='white'>שג</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,23 +41,8 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Amatic SC", "Open Sans", "sans-serif"],
+              sans: ["Rubik", "sans-serif"],
               logo: ["Amatic SC", "cursive"],
-            },
-            fontSize: {
-              xs: ["1.5rem", { lineHeight: "1.4" }],
-              sm: ["1.75rem", { lineHeight: "1.4" }],
-              base: ["2rem", { lineHeight: "1.5" }],
-              lg: ["2.4rem", { lineHeight: "1.5" }],
-              xl: ["2.8rem", { lineHeight: "1.4" }],
-              "2xl": ["3.2rem", { lineHeight: "1.3" }],
-              "3xl": ["3.8rem", { lineHeight: "1.3" }],
-              "4xl": ["4.5rem", { lineHeight: "1.2" }],
-              "5xl": ["5.5rem", { lineHeight: "1.1" }],
-              "6xl": ["6.5rem", { lineHeight: "1.1" }],
-              "7xl": ["8rem", { lineHeight: "1.05" }],
-              "8xl": ["10rem", { lineHeight: "1" }],
-              "9xl": ["12rem", { lineHeight: "1" }],
             },
           },
         },
@@ -57,47 +58,10 @@
       class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--border-neutral)]"
     >
       <nav
-        class="relative max-w-6xl mx-auto px-5 h-16 flex items-center justify-between"
+        class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between"
       >
-        <!-- Desktop links (right side) -->
-        <div class="hidden md:flex items-center gap-6">
-          <a
-            href="#trust"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >אודות</a
-          >
-          <a
-            href="#services"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >שירותים</a
-          >
-          <a
-            href="#faq"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >שאלות</a
-          >
-          <a
-            href="#training"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >הדרכת צוותים</a
-          >
-          <a
-            href="#lecture"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >הרצאה</a
-          >
-          <a
-            href="#professionals"
-            class="text-[16px] text-stone-600 hover:text-stone-900 transition-colors"
-            >לאנשי מקצוע</a
-          >
-        </div>
-
-        <!-- Brand (center) -->
-        <a
-          href="#top"
-          class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none"
-        >
+        <!-- Brand (right in RTL) -->
+        <a href="#top" class="flex flex-col leading-none flex-shrink-0">
           <span
             class="font-logo text-[22px]"
             style="color: var(--logo-purple); font-style: italic"
@@ -108,17 +72,56 @@
           >
         </a>
 
-        <!-- Desktop CTA (left side) + Mobile hamburger -->
+        <!-- Desktop links (center) -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a
+            href="#trust"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >אודות</a
+          >
+          <a
+            href="#process"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >שירותים</a
+          >
+          <a
+            href="#faq"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >שאלות</a
+          >
+          <a
+            href="#"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >לבני משפחה</a
+          >
+          <a
+            href="#training"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >הדרכת צוותים</a
+          >
+          <a
+            href="#professionals"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >לאנשי מקצוע</a
+          >
+          <a
+            href="#lecture"
+            class="text-[14px] text-stone-600 hover:text-stone-900 transition-colors"
+            >הרצאה</a
+          >
+        </div>
+
+        <!-- Desktop CTA (left in RTL) + Mobile hamburger -->
         <div class="flex items-center gap-3">
           <a
             href="#contact"
-            class="hidden md:inline-flex bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white text-[15px] font-medium px-4 py-2 rounded-xl transition-colors"
+            class="hidden lg:inline-flex bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white text-[14px] font-medium px-4 py-2 rounded-xl transition-colors"
           >
             שיחת היכרות
           </a>
           <button
             id="menu-btn"
-            class="md:hidden p-2 text-stone-600"
+            class="lg:hidden p-2 text-stone-600"
             aria-label="תפריט"
             aria-expanded="false"
           >
@@ -130,21 +133,22 @@
       <!-- Mobile menu -->
       <div
         id="mobile-menu"
-        class="md:hidden bg-white border-t border-[var(--border-neutral)] px-5"
+        class="lg:hidden bg-white border-t border-[var(--border-neutral)] px-5"
       >
         <div class="py-4 flex flex-col gap-4">
           <a href="#trust" class="text-[16px] text-stone-600 py-0.5">אודות</a>
-          <a href="#services" class="text-[16px] text-stone-600 py-0.5"
+          <a href="#process" class="text-[16px] text-stone-600 py-0.5"
             >שירותים</a
           >
           <a href="#faq" class="text-[16px] text-stone-600 py-0.5">שאלות</a>
+          <a href="#" class="text-[16px] text-stone-600 py-0.5">לבני משפחה</a>
           <a href="#training" class="text-[16px] text-stone-600 py-0.5"
             >הדרכת צוותים</a
           >
-          <a href="#lecture" class="text-[16px] text-stone-600 py-0.5">הרצאה</a>
           <a href="#professionals" class="text-[16px] text-stone-600 py-0.5"
             >לאנשי מקצוע</a
           >
+          <a href="#lecture" class="text-[16px] text-stone-600 py-0.5">הרצאה</a>
           <a href="#contact" class="text-[16px] text-stone-600 py-0.5"
             >צור קשר</a
           >
@@ -152,38 +156,12 @@
       </div>
     </header>
 
-    <!-- ═══════════════════════════════════════ LOGO HEADER ═══ -->
-    <div class="bg-white py-10 border-b border-[var(--border-neutral)]">
-      <div class="max-w-6xl mx-auto px-5 text-right">
-        <p
-          class="font-logo leading-tight"
-          style="
-            color: var(--logo-purple);
-            font-weight: 700;
-            font-style: italic;
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
-          "
-        >
-          MSW שולי ג'ורג'
-        </p>
-        <p
-          class="text-[var(--primary)] mt-2"
-          style="font-size: clamp(1rem, 2vw, 1.2rem)"
-        >
-          ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם
-        </p>
-        <p class="text-stone-400 text-sm mt-1.5 tracking-wide">
-          עו״סית · מרצה · מדריכה בכירה
-        </p>
-      </div>
-    </div>
-
     <!-- ═══════════════════════════════════════ HERO ═══ -->
-    <section class="bg-white pt-12 pb-14 overflow-hidden">
+    <section class="bg-white pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden">
       <div class="max-w-6xl mx-auto px-5">
         <div class="max-w-2xl mx-auto">
           <!-- Text -->
-          <div class="flex flex-col items-center text-center gap-5 aos">
+          <div class="flex flex-col items-center text-center gap-4 aos">
             <span
               class="inline-flex items-center gap-2 bg-[var(--primary-light)]/40 border border-[var(--primary-light)] text-[var(--primary-hover)] text-xs font-medium px-3 py-1.5 rounded-full w-fit"
             >
@@ -192,22 +170,23 @@
             </span>
 
             <h1
-              class="text-2xl md:text-2xl font-bold text-stone-900 leading-tight"
+              class="text-xl md:text-3xl font-bold text-stone-900 leading-tight"
             >
-              לאחר שהטיפולים נגמרים <br />
-              <span class="text-[var(--primary)]">מתחיל החלק שאף אחד</span
+              חוזרים לחיים אחרי מחלה קשה<br />
+              <span class="text-[var(--primary)]"
+                >לא חייבים לעשות את זה לבד</span
               ><br />
-              לא באמת מכין אליו
             </h1>
 
             <p class="text-stone-500 text-sm leading-relaxed max-w-lg">
-              ליווי רגשי-מעשי לצעירים מחלימים ולבני משפחותיהם, בדרך חזרה לחיים,
-              ללימודים, לעבודה, לזוגיות ולתחושת כיוון.
+              ליווי רגשי-מעשי קצר מועד לצעירים מחלימים ולבני משפחותיהם, בדרך
+              חזרה לחיים, ללימודים, לעבודה, לזוגיות ולתחושת כיוון.
             </p>
 
             <p class="text-stone-500 text-sm leading-relaxed max-w-lg">
-              בהובלת שולי ג'ורג', עו"ס קלינית ומומחית לשיקום, עם יותר מ-25 שנות
-              ניסיון בליווי אנשים ומשפחות במצבי משבר, שינוי והתחלה מחדש.
+              בהובלת שולי ג'ורג',עו"ס קלינית ומומחית לשיקום,<br />
+              בעלת ניסיון של למעלה מ-25 שנות ליווי אנשים ומשפחות במצבי משבר,
+              שינוי והתחלה מחדש.
             </p>
 
             <div class="flex flex-wrap justify-center gap-3 mt-1">
@@ -240,22 +219,23 @@
     </section>
 
     <!-- ═══════════════════════════════════════ TRUST ═══ -->
-    <section id="trust" class="py-20 bg-white">
+    <section id="trust" class="py-12 md:py-16 bg-white">
       <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             אודות
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">קצת עליי</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">קצת עליי</h2>
           <p class="text-stone-500 mt-3 max-w-xl mx-auto text-sm">
-            אני מביאה איתי שילוב בין ניסיון מקצועי עמוק לבין היכרות אישית קרובה
-            עם העולם.
+            אני מביאה איתי שילוב בין ניסיון מקצועי עמוק בעולם בריאות הנפש
+            והשיקום, <br />
+            לבין היכרות אישית קרובה עם עולם ההתמודדות וההחלמה.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 items-start aos aos-d1">
+        <div class="grid md:grid-cols-2 gap-5 md:gap-8 items-start aos aos-d1">
           <!-- Credentials -->
           <div class="flex flex-col gap-3">
             <div
@@ -266,7 +246,7 @@
                 class="w-5 h-5 text-[var(--primary)] flex-shrink-0"
               ></i>
               <p class="text-stone-700 text-sm font-medium">
-                עו"ס קלינית (MSW) — אוניברסיטת תל אביב
+                עו"ס קלינית (MSW), אוניברסיטת תל אביב
               </p>
             </div>
             <div
@@ -276,7 +256,9 @@
                 data-lucide="award"
                 class="w-5 h-5 text-[var(--primary)] flex-shrink-0"
               ></i>
-              <p class="text-stone-700 text-sm font-medium">מומחית לשיקום</p>
+              <p class="text-stone-700 text-sm font-medium">
+                מומחיות בתחום השיקום
+              </p>
             </div>
             <div
               class="flex items-center gap-3 p-4 rounded-2xl border border-[var(--border-warm)] bg-white"
@@ -286,7 +268,7 @@
                 class="w-5 h-5 text-[var(--primary)] flex-shrink-0"
               ></i>
               <p class="text-stone-700 text-sm font-medium">
-                יותר מ-25 שנות ניסיון בליווי אנשים במצבי משבר, קושי ושינוי
+                מעל 25 שנות ניסיון בליווי אנשים במצבי משבר, קושי ושינוי
               </p>
             </div>
             <div
@@ -347,7 +329,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════ INTRO BRIDGE ═══ -->
-    <section class="bg-white py-14 border-t border-[var(--border-neutral)]">
+    <section class="bg-white py-8 md:py-10 border-t border-[var(--border-neutral)]">
       <div class="max-w-3xl mx-auto px-5 text-center aos">
         <p class="text-stone-600 text-lg leading-relaxed">
           גם כשהטיפולים מסתיימים, לא תמיד מרגישים שהחיים באמת חזרו. לפעמים יש
@@ -359,16 +341,16 @@
     </section>
 
     <!-- ═══════════════════════════════════════ CHECKLIST (about) ═══ -->
-    <section id="about" class="py-20 bg-[var(--bg-warm)]">
+    <section id="about" class="py-12 md:py-16 bg-[var(--bg-warm)]">
       <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             למי זה מתאים?
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">
-            הגעת למקום הנכון אם...
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">
+            הליווי יכול להתאים לך אם ...
           </h2>
         </div>
 
@@ -386,7 +368,7 @@
               ></i>
             </div>
             <p class="text-stone-700 text-sm leading-relaxed">
-              הטיפולים נגמרו, אבל בפנים את או אתה עדיין לא רגועים
+              הטיפולים נגמרו, אבל בפנים את או אתה עדיין לא מרגישים שחזרתם לעצמכם
             </p>
           </div>
           <!-- Item 2 -->
@@ -482,7 +464,7 @@
               ></i>
             </div>
             <p class="text-stone-700 text-sm leading-relaxed">
-              אתם הורים, בני זוג או בני משפחה שמחזיקים הרבה לבד
+              אתם הורים, בני זוג או בני משפחה שנושאים הרבה על הכתפיים
             </p>
           </div>
           <!-- Item 8 -->
@@ -503,7 +485,7 @@
           </div>
         </div>
 
-        <div class="text-center mt-10 aos aos-d2">
+        <div class="text-center mt-6 aos aos-d2">
           <a
             href="#contact"
             class="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-medium px-6 py-3.5 rounded-xl transition-colors text-sm"
@@ -515,227 +497,16 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════ WHAT YOU GET (services) ═══ -->
-    <section id="services" class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
-          <p
-            class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
-          >
-            השירות שלי
-          </p>
-          <h2 class="text-3xl font-bold text-stone-900">מה מקבלים בליווי?</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6 aos aos-d1">
-          <!-- 1 -->
-          <div
-            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
-            >
-              <i data-lucide="shield" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-1.5">
-                מרחב בטוח, רגשי ומקצועי
-              </h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                מקום שאפשר לעצור בו רגע, להבין מה עובר עליכם, ולדבר בלי צורך
-                להסביר את עצמכם מהתחלה בכל פעם.
-              </p>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div
-            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
-            >
-              <i data-lucide="map" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-1.5">
-                סדר בתוך התקופה המבלבלת
-              </h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                נעשה יחד מיפוי של מה קשה עכשיו, מה חשוב לכם, ומה יכול לעזור באמת
-                בשלב הזה.
-              </p>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div
-            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
-            >
-              <i
-                data-lucide="footprints"
-                class="w-5 h-5 text-[var(--primary)]"
-              ></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-1.5">
-                צעדים מעשיים שמקדמים את החיים
-              </h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                נחשוב יחד איך חוזרים בהדרגה לתפקוד, ללימודים, לעבודה, לקשרים,
-                להחלטות ולכיוון.
-              </p>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div
-            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
-            >
-              <i data-lucide="clock" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-1.5">
-                ליווי שמכבד את הקצב שלכם
-              </h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                בלי לחץ, בלי דרישות מוגזמות, ובלי לוותר על התקדמות.
-              </p>
-            </div>
-          </div>
-          <!-- 5 -->
-          <div
-            class="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors md:col-span-2"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center flex-shrink-0"
-            >
-              <i data-lucide="link" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-1.5">
-                כיוון, זהות ומשמעות
-              </h3>
-              <p class="text-stone-500 text-sm leading-relaxed">
-                לא רק לדבר על מה שכואב — אלא גם להבין איך ממשיכים לחיות, לבחור
-                ולבנות את היום שאחרי.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════ WORK WITH ME ═══ -->
-    <section id="work-with-me" class="py-20 bg-[var(--bg-warm)]">
-      <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
-          <p
-            class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
-          >
-            שירותים
-          </p>
-          <h2 class="text-3xl font-bold text-stone-900">איך אפשר לעבוד איתי</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6 aos aos-d1">
-          <!-- Service 1 -->
-          <div
-            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center mb-4"
-            >
-              <i data-lucide="user" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">
-              ליווי אישי לצעירים מחלימים
-            </h3>
-            <p class="text-stone-500 text-sm leading-relaxed">
-              תהליך אישי המשלב תמיכה רגשית, חשיבה משקמת, בניית כיוון וצעדים
-              מעשיים לחזרה לחיים.
-            </p>
-          </div>
-          <!-- Service 2 -->
-          <div
-            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center mb-4"
-            >
-              <i data-lucide="users" class="w-5 h-5 text-[var(--primary)]"></i>
-            </div>
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">
-              ליווי לבני משפחה ובני זוג
-            </h3>
-            <p class="text-stone-500 text-sm leading-relaxed">
-              מרחב להורים, אחים, בני זוג ובני משפחה שמתמודדים בעצמם עם העומס,
-              הדאגה והצורך להחזיק הכול.
-            </p>
-          </div>
-          <!-- Service 3 -->
-          <div
-            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center mb-4"
-            >
-              <i
-                data-lucide="milestone"
-                class="w-5 h-5 text-[var(--primary)]"
-              ></i>
-            </div>
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">
-              הכנה לצמתים חשובים
-            </h3>
-            <p class="text-stone-500 text-sm leading-relaxed">
-              ליווי לקראת חזרה ללימודים, חזרה לעבודה, קבלת החלטות, שיחות
-              משמעותיות או תקופות מעבר.
-            </p>
-          </div>
-          <!-- Service 4 -->
-          <div
-            class="bg-white rounded-2xl p-6 border border-[var(--border-warm)] hover:border-[var(--primary-light)] transition-colors"
-          >
-            <div
-              class="w-10 h-10 rounded-xl bg-[var(--primary-light)]/30 flex items-center justify-center mb-4"
-            >
-              <i
-                data-lucide="presentation"
-                class="w-5 h-5 text-[var(--primary)]"
-              ></i>
-            </div>
-            <h3 class="font-semibold text-stone-800 text-lg mb-2">
-              הדרכת צוותים ואנשי מקצוע
-            </h3>
-            <p class="text-stone-500 text-sm leading-relaxed">
-              הדרכות, הרצאות וליווי מקצועי לצוותים שפוגשים מחלימים ובני
-              משפחותיהם ורוצים להרחיב הבנה וכלים.
-            </p>
-            <a
-              href="#training"
-              class="inline-flex items-center gap-1 text-xs text-[var(--primary)] mt-3 hover:underline"
-            >
-              לפרטים נוספים <i data-lucide="arrow-left" class="w-3 h-3"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══════════════════════════════════════ PROCESS ═══ -->
-    <section id="process" class="py-20 bg-white">
+    <section id="process" class="py-12 md:py-16 bg-white">
       <div class="max-w-4xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             התהליך
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">איך זה עובד?</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">איך זה עובד?</h2>
         </div>
 
         <div class="flex flex-col gap-0 aos aos-d1">
@@ -824,11 +595,11 @@
           </div>
         </div>
 
-        <p class="text-xs text-stone-400 text-center mt-8 aos aos-d2">
+        <p class="text-xs text-stone-400 text-center mt-5 aos aos-d2">
           הפגישות מתקיימות בקליניקה או בזום, לפי הצורך והאפשרות.
         </p>
 
-        <div class="text-center mt-8 aos aos-d3">
+        <div class="text-center mt-5 aos aos-d3">
           <a
             href="#contact"
             class="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-medium px-6 py-3.5 rounded-xl transition-colors text-sm"
@@ -841,15 +612,15 @@
     </section>
 
     <!-- ═══════════════════════════════════════ TESTIMONIALS ═══ -->
-    <section id="testimonials" class="py-20 bg-white">
+    <section id="testimonials" class="py-12 md:py-16 bg-white">
       <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             עדויות
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">
             מה אנשים מספרים אחרי התהליך
           </h2>
         </div>
@@ -902,20 +673,20 @@
     </section>
 
     <!-- ═══════════════════════════════════════ PROFESSIONALS ═══ -->
-    <section id="professionals" class="py-20 bg-[var(--bg-warm)]">
+    <section id="professionals" class="py-12 md:py-16 bg-[var(--bg-warm)]">
       <div class="max-w-5xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             לאנשי מקצוע
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">
             לאנשי מקצוע, קופות חולים וגורמים מפנים
           </h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 aos aos-d1">
+        <div class="grid md:grid-cols-2 gap-5 md:gap-8 aos aos-d1">
           <!-- Left -->
           <div>
             <p class="text-stone-600 text-sm leading-relaxed mb-6">
@@ -1014,15 +785,15 @@
     </section>
 
     <!-- ═══════════════════════════════════════ FAQ ═══ -->
-    <section id="faq" class="py-20 bg-white">
+    <section id="faq" class="py-12 md:py-16 bg-white">
       <div class="max-w-3xl mx-auto px-5">
-        <div class="text-center mb-12 aos">
+        <div class="text-center mb-8 aos">
           <p
             class="text-xs font-medium text-[var(--primary)] uppercase tracking-widest mb-2"
           >
             שאלות
           </p>
-          <h2 class="text-3xl font-bold text-stone-900">שאלות נפוצות</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-stone-900">שאלות נפוצות</h2>
         </div>
 
         <div class="flex flex-col gap-3 aos aos-d1">
@@ -1045,8 +816,9 @@
             </button>
             <div class="faq-body">
               <p class="px-6 pb-5 text-sm text-stone-500 leading-relaxed">
-                השירות מיועד בעיקר לצעירים מחלימים בגילאי <span dir="ltr">18–35</span>, אך במקרים
-                מסוימים ניתן לפנות גם מעבר לטווח הזה. מוזמנים ליצור קשר ולשאול.
+                השירות מיועד בעיקר לצעירים מחלימים בגילאי
+                <span dir="ltr">18–35</span>, אך במקרים מסוימים ניתן לפנות גם
+                מעבר לטווח הזה. מוזמנים ליצור קשר ולשאול.
               </p>
             </div>
           </div>
@@ -1155,9 +927,9 @@
     </section>
 
     <!-- ═══════════════════════════════════════ CONTACT ═══ -->
-    <section id="contact" class="py-20 bg-[var(--bg-warm)]">
+    <section id="contact" class="py-12 md:py-16 bg-[var(--bg-warm)]">
       <div class="max-w-5xl mx-auto px-5">
-        <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           <!-- Info -->
           <div class="aos">
             <p
@@ -1165,7 +937,7 @@
             >
               צור קשר
             </p>
-            <h2 class="text-3xl font-bold text-stone-900 mb-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4">
               לא צריך לעבור את זה לבד
             </h2>
             <p class="text-stone-600 text-sm leading-relaxed mb-6">
@@ -1210,7 +982,11 @@
                 </div>
                 <div>
                   <p class="text-xs text-stone-400 mb-0.5">וואטסאפ / טלפון</p>
-                  <a href="tel:+972542307754" class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors">054-2307754</a>
+                  <a
+                    href="tel:+972542307754"
+                    class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors"
+                    >054-2307754</a
+                  >
                 </div>
               </div>
               <div class="flex items-center gap-3">
@@ -1224,7 +1000,10 @@
                 </div>
                 <div>
                   <p class="text-xs text-stone-400 mb-0.5">מייל</p>
-                  <a href="mailto:shulig5@gmail.com" class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors">
+                  <a
+                    href="mailto:shulig5@gmail.com"
+                    class="text-sm text-stone-600 font-medium hover:text-[var(--primary)] transition-colors"
+                  >
                     shulig5@gmail.com
                   </a>
                 </div>
@@ -1270,7 +1049,30 @@
 
           <!-- Form -->
           <div class="aos aos-d1">
+            <!-- Success message (hidden by default) -->
+            <div
+              id="form-success"
+              class="hidden bg-white border border-[var(--border-warm)] rounded-2xl p-7 text-center"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-[var(--primary-light)]/30 flex items-center justify-center mx-auto mb-4"
+              >
+                <i
+                  data-lucide="check-circle"
+                  class="w-7 h-7 text-[var(--primary)]"
+                ></i>
+              </div>
+              <h3 class="text-lg font-bold text-stone-900 mb-2">
+                הפנייה נשלחה בהצלחה
+              </h3>
+              <p class="text-sm text-stone-500 leading-relaxed">
+                תודה שפנית אליי. אחזור אליך בהקדם,
+                <br />בדרך כלל תוך 24 שעות.
+              </p>
+            </div>
+
             <form
+              id="contact-form"
               name="contact"
               method="POST"
               action="/#contact"
@@ -1347,7 +1149,7 @@
     <!-- ═══════════════════════════════════════ TRAINING PLACEHOLDER ═══ -->
     <section
       id="training"
-      class="py-16 bg-white border-t border-[var(--border-neutral)]"
+      class="py-10 md:py-14 bg-white border-t border-[var(--border-neutral)]"
     >
       <div class="max-w-5xl mx-auto px-5 text-center aos">
         <p
@@ -1370,7 +1172,7 @@
     <!-- ═══════════════════════════════════════ LECTURE PLACEHOLDER ═══ -->
     <section
       id="lecture"
-      class="py-16 bg-[var(--bg-warm)] border-t border-[var(--border-warm)]"
+      class="py-10 md:py-14 bg-[var(--bg-warm)] border-t border-[var(--border-warm)]"
     >
       <div class="max-w-5xl mx-auto px-5 text-center aos">
         <p
@@ -1408,7 +1210,7 @@
             >אודות</a
           >
           <a
-            href="#services"
+            href="#process"
             class="text-xs text-stone-400 hover:text-stone-600 transition-colors"
             >שירותים</a
           >
@@ -1436,7 +1238,7 @@
 
     <!-- ═══════════════════════════════════════ WHATSAPP ═══ -->
     <a
-      href="https://wa.me/972542307754?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D"
+      href="https://wa.me/972542307754?text=היי, אשמח לשמוע פרטים נוספים על התהליך"
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-btn fixed bottom-6 left-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1ebe5d] rounded-full flex items-center justify-center shadow-lg"
