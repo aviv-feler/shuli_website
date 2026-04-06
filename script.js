@@ -11,9 +11,17 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 document.querySelectorAll("#mobile-menu a").forEach((a) =>
-  a.addEventListener("click", () => {
+  a.addEventListener("click", (e) => {
+    const href = a.getAttribute("href");
     mobileMenu.classList.remove("open");
     menuBtn.setAttribute("aria-expanded", "false");
+    if (href && href.startsWith("#") && href.length > 1) {
+      e.preventDefault();
+      setTimeout(() => {
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 350);
+    }
   }),
 );
 
