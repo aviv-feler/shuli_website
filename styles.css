@@ -133,6 +133,8 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 .portrait-crop { position: relative; aspect-ratio: 590 / 884; overflow: hidden; border-radius: 16px; background: var(--cream); }
 .portrait-crop img { position: absolute; top: -22.3982%; left: 0; width: 100%; height: auto; }
 .portrait figcaption { margin-top: 8px; text-align: center; color: var(--muted); font-size: 14px; }
+.hero .hero-portrait { width: min(100%, 350px); max-width: none; }
+.hero-portrait .portrait-crop { box-shadow: var(--shadow); border: 1px solid var(--rose-beige); }
 .quote-panel, .highlight-panel { padding: 38px; border-radius: 26px 8px 26px 8px; background: var(--rose-beige-soft); }
 .highlight-panel { background: var(--sage); color: var(--white); }
 .highlight-panel h2, .highlight-panel h3, .highlight-panel p, .highlight-panel li { color: var(--white); }
@@ -200,13 +202,23 @@ h3 { margin-bottom: 10px; font-size: 20px; }
   .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1.2fr 1fr; }
+  .hero-intro { display: contents; }
+  .hero-grid { gap: 18px; text-align: center; }
+  .hero-intro .eyebrow { grid-row: 1; margin: 0; }
+  .hero-intro h1 { grid-row: 2; margin: 0 auto; max-width: 650px; }
+  .hero .hero-portrait { grid-row: 3; width: 200px; }
+  .hero-intro .hero-copy { grid-row: 4; margin: 0 auto; }
+  .hero-intro .hero-actions { grid-row: 5; justify-content: center; }
 }
 @media (max-width: 700px) {
   .container, .narrow { width: min(100% - 30px, var(--max)); }
   .brand-name { font-size: 27px; }
   .brand-role { font-size: 10px; }
-  .hero { padding: 64px 0 58px; }
-  .hero-grid { gap: 34px; }
+  .hero { padding: 30px 0 36px; }
+  .hero-grid { gap: 16px; }
+  .hero-intro h1 { font-size: clamp(28px, 7.5vw, 36px); }
+  .hero .hero-portrait { width: 170px; }
+  .hero-intro .hero-copy { font-size: 16px; line-height: 1.65; }
   .hero-card { padding: 28px; }
   .hero-card p { font-size: 19px; }
   .page-hero { padding: 54px 0 48px; }
