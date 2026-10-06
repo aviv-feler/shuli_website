@@ -1,107 +1,61 @@
-lucide.createIcons();
+const menuButton = document.querySelector("[data-menu-button]");
+const mobileMenu = document.querySelector("[data-mobile-menu]");
 
-/* Mobile menu */
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const isOpen = mobileMenu.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", isOpen);
-});
-
-document.querySelectorAll("#mobile-menu a").forEach((a) =>
-  a.addEventListener("click", (e) => {
-    const href = a.getAttribute("href");
-    mobileMenu.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-    if (href && href.startsWith("#") && href.length > 1) {
-      e.preventDefault();
-      setTimeout(() => {
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 350);
-    }
-  }),
-);
-
-/* Close mobile menu on outside click */
-document.addEventListener("click", (e) => {
-  if (
-    mobileMenu.classList.contains("open") &&
-    !mobileMenu.contains(e.target) &&
-    !menuBtn.contains(e.target)
-  ) {
-    mobileMenu.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
-});
-
-/* FAQ accordion */
-function toggleFaq(btn) {
-  const body = btn.nextElementSibling;
-  const icon = btn.querySelector(".faq-icon");
-  const isOpen = body.classList.contains("open");
-
-  document.querySelectorAll(".faq-body").forEach((b) => b.classList.remove("open"));
-  document.querySelectorAll(".faq-icon").forEach((i) => i.classList.remove("open"));
-  document
-    .querySelectorAll("[onclick='toggleFaq(this)']")
-    .forEach((b) => b.setAttribute("aria-expanded", "false"));
-
-  if (!isOpen) {
-    body.classList.add("open");
-    icon.classList.add("open");
-    btn.setAttribute("aria-expanded", "true");
-  }
+function closeMenu() {
+  if (!menuButton || !mobileMenu) return;
+  menuButton.setAttribute("aria-expanded", "false");
+  mobileMenu.classList.remove("open");
+  document.body.classList.remove("menu-open");
 }
 
-/* Scroll animations */
-const obs = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) e.target.classList.add("visible");
+if (menuButton && mobileMenu) {
+  menuButton.addEventListener("click", () => {
+    const willOpen = menuButton.getAttribute("aria-expanded") !== "true";
+    menuButton.setAttribute("aria-expanded", String(willOpen));
+    mobileMenu.classList.toggle("open", willOpen);
+    document.body.classList.toggle("menu-open", willOpen);
+  });
+  mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+  window.addEventListener("resize", () => { if (window.innerWidth > 1000) closeMenu(); });
+}
+
+const animatedElements = document.querySelectorAll(".aos");
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
-  },
-  { threshold: 0.08, rootMargin: "0px 0px -30px 0px" },
-);
-document.querySelectorAll(".aos").forEach((el) => obs.observe(el));
-
-/* Contact form — show success message */
-const contactForm = document.getElementById("contact-form");
-const formSuccess = document.getElementById("form-success");
-
-if (contactForm && formSuccess) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(contactForm);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        contactForm.classList.add("hidden");
-        formSuccess.classList.remove("hidden");
-        lucide.createIcons();
-      })
-      .catch(() => {
-        contactForm.classList.add("hidden");
-        formSuccess.classList.remove("hidden");
-        lucide.createIcons();
-      });
-  });
+  }, { threshold: .08, rootMargin: "0px 0px -35px 0px" });
+  animatedElements.forEach((element) => observer.observe(element));
+} else {
+  animatedElements.forEach((element) => element.classList.add("visible"));
 }
 
-/* Smooth anchor scrolling */
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener("click", (e) => {
-    const href = a.getAttribute("href");
-    if (href.length <= 1) return;
-    const t = document.querySelector(href);
-    if (t) {
-      e.preventDefault();
-      t.scrollIntoView({ behavior: "smooth", block: "start" });
+const contactForm = document.querySelector("[data-contact-form]");
+const formSuccess = document.querySelector("[data-form-success]");
+if (contactForm && formSuccess) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "שולחת...";
+    try {
+      const body = new URLSearchParams(new FormData(contactForm));
+      const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+      if (!response.ok) throw new Error("Form submission failed");
+      contactForm.classList.add("hidden");
+      formSuccess.classList.add("visible");
+      formSuccess.focus();
+    } catch {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+      const whatsappUrl = contactForm.dataset.whatsapp;
+      if (whatsappUrl) window.location.href = whatsappUrl;
     }
   });
-});
+}
