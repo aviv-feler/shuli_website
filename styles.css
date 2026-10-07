@@ -70,7 +70,7 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 .brand { flex: 0 0 auto; display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-family: "Amatic SC", cursive; color: var(--sage-dark); font-size: 32px; font-weight: 700; }
 .brand-role { margin-top: 3px; color: var(--muted); font-size: 12px; }
-.desktop-nav { display: flex; align-items: center; justify-content: center; gap: 22px; }
+.desktop-nav { display: flex; align-items: center; justify-content: center; gap: 14px; }
 .desktop-nav a { position: relative; padding-block: 7px; color: var(--ink); font-size: 14px; white-space: nowrap; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 0; width: 100%; height: 2px; border-radius: 2px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .2s ease; }
 .desktop-nav a:hover::after, .desktop-nav a[aria-current="page"]::after { transform: scaleX(1); }
@@ -188,6 +188,29 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 .whatsapp-float svg { width: 27px; height: 27px; fill: currentColor; }
 .aos { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
 .aos.visible { opacity: 1; transform: translateY(0); }
+.hope-hero { padding: 64px 0 54px; background: var(--cream); text-align: center; }
+.hope-hero h1 { margin-inline: auto; color: var(--sage); }
+.hope-hero h2 { font-size: clamp(24px, 3vw, 34px); color: var(--sage); margin-bottom: 32px; }
+.hope-hero p { font-size: 18px; line-height: 1.9; }
+.hope-reflection { background: var(--cream-soft); }
+.hope-reflection .section-heading h2 { font-family: "Amatic SC", cursive; font-size: clamp(42px, 6vw, 64px); }
+.reflection-list { list-style: none; padding: 0; margin: 0; counter-reset: reflection; display: grid; gap: 16px; }
+.reflection-list li { counter-increment: reflection; position: relative; padding: 24px 80px 24px 24px; border-radius: 16px; background: var(--sage-light); }
+.reflection-list li:nth-child(2) { background: var(--rose-beige-soft); }
+.reflection-list li::before { content: counter(reflection); position: absolute; top: 24px; right: 22px; width: 38px; height: 38px; display: grid; place-items: center; background: var(--sage); color: white; border-radius: 50%; font-weight: 700; }
+.reflection-list p { margin: 0; }
+.reflection-closing { margin-top: 32px; text-align: center; }
+.reflection-closing .reflection-emphasis { font-weight: 700; font-size: 21px; }
+.reflection-signature { border-top: 1px solid var(--gold); padding-top: 20px; margin: 24px auto 4px; width: fit-content; font-weight: 700; font-size: 24px; }
+@media (max-width: 700px) {
+  .hope-hero { padding: 36px 0; }
+  .hope-hero p { font-size: 16px; }
+  .hope-hero h2 { margin-bottom: 24px; }
+  .reflection-list { gap: 12px; }
+  .reflection-list li { padding: 16px 58px 16px 16px; }
+  .reflection-list li::before { top: 16px; right: 14px; width: 30px; height: 30px; }
+  .reflection-list h3 { font-size: 18px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
