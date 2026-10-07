@@ -129,6 +129,7 @@ h3 { margin-bottom: 10px; font-size: 20px; }
 .split-center { align-items: center; }
 .portrait { width: min(100%, 300px); margin: 0 auto; }
 .about-portrait-column { display: grid; gap: 24px; }
+.portrait-photo img { width: 100%; height: auto; border-radius: 16px; }
 /* Show only the photograph (y=198..1082) from the supplied 590x1280 screenshot. */
 .portrait-crop { position: relative; aspect-ratio: 590 / 884; overflow: hidden; border-radius: 16px; background: var(--cream); }
 .portrait-crop img { position: absolute; top: -22.3982%; left: 0; width: 100%; height: auto; }
